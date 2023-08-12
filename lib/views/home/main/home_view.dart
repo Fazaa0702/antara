@@ -1,3 +1,4 @@
+import 'package:antara/app/controllers/habit_controller.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -5,8 +6,6 @@ import 'package:get/get.dart';
 import '../../home/section/home_section.dart';
 import '../../activity/main/add_activity.dart';
 import '../../../models/activity_model.dart';
-
-
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -18,6 +17,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
 
   int selectedIndex = 0;
+  final HabitController _habitController = Get.put(HabitController());
 
   final List<Widget> _list = [
     HomeScreen(),
@@ -28,6 +28,7 @@ class _HomeViewState extends State<HomeView> {
   void _onItemTapped(int index){
     setState(() {
       selectedIndex = index;
+      _habitController.reset();
     });
   }
   @override

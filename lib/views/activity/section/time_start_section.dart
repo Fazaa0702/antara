@@ -4,9 +4,12 @@ import 'package:day_night_time_picker/day_night_time_picker.dart';
 
 import 'package:antara/models/activity_model.dart';
 
-class TimeStartSection extends StatelessWidget {
-  const TimeStartSection({super.key});
+import '../../../app/controllers/activity_controller.dart';
 
+class TimeStartSection extends StatelessWidget {
+  TimeStartSection({super.key});
+
+  final controllerActivity = Get.find<ActivityController>();
 
   @override
 
@@ -34,11 +37,13 @@ class TimeStartSection extends StatelessWidget {
               child: SizedBox(
                 height: 50,
                 child: TextFormField(
-                  readOnly: true,
+                  controller: controllerActivity.controllerTimeStart,
+                  onChanged: (value) => controllerActivity.startTime = value,
                   style: const TextStyle(
                     fontSize: 14.0,
                     fontWeight: FontWeight.w500,
                   ),
+                  readOnly: true,
                   decoration: const InputDecoration(
                     hintText: "Waktu Mulai",
                     enabledBorder: UnderlineInputBorder(
@@ -60,6 +65,9 @@ class TimeStartSection extends StatelessWidget {
                     is24HrFormat: true,
                     value: timenow,
                     onChange: (value) {
+                      controllerActivity.controllerTimeStart.text =
+                          value.format(context);
+                      controllerActivity.startTime = value.format(context);
                     },
                   ),
                 );

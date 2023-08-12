@@ -1,9 +1,15 @@
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:antara/app/controllers/habit_controller.dart';
 
 class DateSection extends StatelessWidget {
-  const DateSection({Key? key}) : super(key: key);
+  DateSection({super.key});
+
+
+  final HabitController _habitController = Get.put(HabitController());
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +44,9 @@ class DateSection extends StatelessWidget {
         deactivatedColor: Colors.white60,
         locale: "id_ID",
         daysCount: 31,
+        onDateChange: (selectedDate){
+          _habitController.reset();
+        },
       ),
     ) ;
   }

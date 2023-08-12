@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               const TodayTitleSection(),
-              const DateSection(),
+              DateSection(),
               const TaskTitleSection(),
               TaskSection(),
               const HabitTitleSection(),

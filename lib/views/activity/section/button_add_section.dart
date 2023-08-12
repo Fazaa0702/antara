@@ -1,3 +1,5 @@
+import 'package:antara/app/controllers/activity_controller.dart';
+import 'package:antara/views/home/section/home_section.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +9,9 @@ import 'time_stop_section.dart';
 import 'title_activity_section.dart';
 
 class ButtonAddSection extends StatelessWidget {
-  const ButtonAddSection({super.key});
+  ButtonAddSection({super.key});
+
+  final controllerActivity = Get.put(ActivityController());
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class ButtonAddSection extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         child: ElevatedButton(
-          onPressed: (){ },
+          onPressed: (){Navigator.pop(context,controllerActivity.getActivity());},
           style: ElevatedButton.styleFrom(
             // backgroundColor: MyColors.primaryColor,
             backgroundColor: Colors.transparent,

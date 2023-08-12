@@ -1,3 +1,4 @@
+import 'package:antara/app/controllers/activity_controller.dart';
 import 'package:antara/models/activity_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +11,9 @@ import '../section/button_add_section.dart';
 
 
 class AddActivity extends StatelessWidget {
-  const AddActivity({Key? key}) : super(key: key);
+  AddActivity({Key? key}) : super(key: key);
+
+  final controllerActivity = Get.put(ActivityController());
 
   @override
   Widget build(BuildContext context) {

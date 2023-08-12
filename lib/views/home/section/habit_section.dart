@@ -23,7 +23,7 @@ class HabitSection extends StatelessWidget {
         ),
         children: [
           GestureDetector(
-            onTap: ()=>_controller.onItemTapped(),
+            onTap: ()=>_controller.onItemMinumTapped(),
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -49,15 +49,33 @@ class HabitSection extends StatelessWidget {
                             width: 3,
                             color: Colors.white,
                           ),
-                          Obx(() => Text(
-                            _controller.counter.toString(),
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Obx(() => Text(
+                                _controller.minumCounter.toString(),
+                                style: const TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: 'Poppins'
+                                ),
+                              )
+                              ),
+                              Container(
+                                height: 3,
+                                width: 30,
                                 color: Colors.white,
-                                fontFamily: 'Poppins'
-                            ),
-                          )
+                              ),
+                              Text(
+                                '8',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -68,7 +86,7 @@ class HabitSection extends StatelessWidget {
             ) ,
           ),
           GestureDetector(
-            onTap: ()=>_controller.onItemTapped(),
+            onTap: ()=>_controller.onItemTidurTapped(),
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -94,15 +112,33 @@ class HabitSection extends StatelessWidget {
                             width: 3,
                             color: Colors.white,
                           ),
-                          Obx(() => Text(
-                            _controller.counter.toString(),
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Obx(() => Text(
+                                _controller.tidurCounter.toString(),
+                                style: const TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: 'Poppins'
+                                ),
+                              )
+                              ),
+                              Container(
+                                height: 3,
+                                width: 30,
                                 color: Colors.white,
-                                fontFamily: 'Poppins'
-                            ),
-                          )
+                              ),
+                              Text(
+                                '1',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -113,7 +149,7 @@ class HabitSection extends StatelessWidget {
             ) ,
           ),
           GestureDetector(
-            onTap: ()=>_controller.onItemTapped(),
+            onTap: ()=>_controller.onItemMakanTapped(),
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -139,15 +175,33 @@ class HabitSection extends StatelessWidget {
                             width: 3,
                             color: Colors.white,
                           ),
-                          Obx(() => Text(
-                            _controller.counter.toString(),
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Obx(() => Text(
+                                _controller.makanCounter.toString(),
+                                style: const TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: 'Poppins'
+                                ),
+                              )
+                              ),
+                              Container(
+                                height: 3,
+                                width: 30,
                                 color: Colors.white,
-                                fontFamily: 'Poppins'
-                            ),
-                          )
+                              ),
+                              Text(
+                                '3',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -158,7 +212,7 @@ class HabitSection extends StatelessWidget {
             ) ,
           ),
           GestureDetector(
-            onTap: ()=>_controller.onItemTapped(),
+            onTap: ()=>_controller.onItemOlahragaTapped(),
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -184,15 +238,33 @@ class HabitSection extends StatelessWidget {
                             width: 3,
                             color: Colors.white,
                           ),
-                          Obx(() => Text(
-                            _controller.counter.toString(),
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Obx(() => Text(
+                                _controller.olahragaCounter.toString(),
+                                style: const TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: 'Poppins'
+                                ),
+                              )
+                              ),
+                              Container(
+                                height: 3,
+                                width: 30,
                                 color: Colors.white,
-                                fontFamily: 'Poppins'
-                            ),
-                          )
+                              ),
+                              Text(
+                                '1',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

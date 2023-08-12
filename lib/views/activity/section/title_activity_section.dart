@@ -1,12 +1,15 @@
+import 'package:antara/app/controllers/activity_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:antara/models/activity_model.dart';
+import '../main/add_activity.dart';
 
 
 class TitleActivitySection extends StatelessWidget {
-  const TitleActivitySection({super.key});
+  TitleActivitySection({super.key});
 
+  final controllerActivity = Get.put(ActivityController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +26,7 @@ class TitleActivitySection extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         TextFormField(
+          controller: controllerActivity.controllerNameActivity,
           textAlignVertical: TextAlignVertical.center,
           onChanged: (value){},
           style: const TextStyle(

@@ -1,3 +1,4 @@
+import 'package:antara/app/controllers/activity_controller.dart';
 import 'package:antara/models/activity_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -5,6 +6,8 @@ import 'package:get/get.dart';
 class TaskSection extends StatelessWidget {
 
   TaskSection({super.key});
+
+  final ActivityController controller = Get.put(ActivityController());
 
   double height = Get.height;
   double width = Get.width;
@@ -48,7 +51,7 @@ class TaskSection extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text(
-                    activity.time,
+                    '${activity.timeStart} - ${activity.timeStop}',
                     style: const TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.bold,
