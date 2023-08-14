@@ -1,12 +1,10 @@
 import 'package:antara/app/controllers/activity_controller.dart';
-import 'package:antara/views/home/section/home_section.dart';
+import 'package:antara/models/activity_model.dart';
+import 'package:antara/views/home/main/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:antara/models/activity_model.dart';
-import 'time_start_section.dart';
-import 'time_stop_section.dart';
-import 'title_activity_section.dart';
+
 
 class ButtonAddSection extends StatelessWidget {
   ButtonAddSection({super.key});
@@ -30,7 +28,14 @@ class ButtonAddSection extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         child: ElevatedButton(
-          onPressed: (){Navigator.pop(context,controllerActivity.getActivity());},
+          onPressed: (){
+            controllerActivity.listActivity.add(ActivityModel(
+                timeStart: controllerActivity.startTime,
+                timeStop: controllerActivity.stopTime,
+                activity: controllerActivity.name)
+            );
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeView()));
+          },
           style: ElevatedButton.styleFrom(
             // backgroundColor: MyColors.primaryColor,
             backgroundColor: Colors.transparent,

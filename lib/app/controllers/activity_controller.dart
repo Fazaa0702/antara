@@ -7,20 +7,19 @@ class ActivityController extends GetxController{
   var controllerTimeStart = TextEditingController();
   var controllerTimeStop = TextEditingController();
 
+  final List<ActivityModel> listActivity = [
+
+  ];
+
   var name = 'No Value';
   var startTime = 'No Value';
   var stopTime = 'No Value';
 
-  ActivityModel getActivity(){
+  getActivity(){
     return ActivityModel(
         timeStart: controllerTimeStart.text,
         timeStop: controllerTimeStop.text,
         activity: controllerNameActivity.text,
     );
   }
-
-  void saveActivity(){
-    ActivityModel activityModel = getActivity();
-  }
-
 }

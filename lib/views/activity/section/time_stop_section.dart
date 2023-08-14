@@ -67,7 +67,7 @@ class TimeStopSection extends StatelessWidget {
                     onChange: (value) {
                       controllerActivity.controllerTimeStop.text =
                           value.format(context);
-                      controllerActivity.startTime = value.format(context);
+                      controllerActivity.stopTime = value.format(context);
                     },
                   ),
                 );

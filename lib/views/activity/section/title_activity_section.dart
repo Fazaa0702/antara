@@ -28,7 +28,7 @@ class TitleActivitySection extends StatelessWidget {
         TextFormField(
           controller: controllerActivity.controllerNameActivity,
           textAlignVertical: TextAlignVertical.center,
-          onChanged: (value){},
+          onChanged: (value)=> controllerActivity.name = value,
           style: const TextStyle(
             fontSize: 14.0,
             fontWeight: FontWeight.w500,

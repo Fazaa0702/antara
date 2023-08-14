@@ -11,9 +11,7 @@ class ActivityModel{
 
 }
 
-var activityList = [
-  ActivityModel(timeStart: '21.00', timeStop: '23.00',activity: 'Nugas'),
-];
+
 
 
 

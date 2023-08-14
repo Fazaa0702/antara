@@ -1,5 +1,6 @@
 import 'package:antara/app/controllers/activity_controller.dart';
 import 'package:antara/models/activity_model.dart';
+import 'package:antara/views/activity/main/add_activity.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +8,8 @@ class TaskSection extends StatelessWidget {
 
   TaskSection({super.key});
 
-  final ActivityController controller = Get.put(ActivityController());
+  final ActivityController controllerActivity = Get.put(ActivityController());
+
 
   double height = Get.height;
   double width = Get.width;
@@ -19,20 +21,20 @@ class TaskSection extends StatelessWidget {
       height: 300,
       width: width,
       child: ListView.builder(
+        itemCount: controllerActivity.listActivity.length,
         itemBuilder: (context, index){
-          final ActivityModel activity = activityList[index];
+          final activity = controllerActivity.listActivity[index];
           return InkWell(
-            onTap: (){ },
+            onTap: (){},
             child: listItem(activity),
           );
         },
-        itemCount: activityList.length,
       ),
     );
 
   }
 
-  Widget listItem(ActivityModel activity){
+  Widget listItem(activity){
     return Card(
       margin: const EdgeInsets.all(5.0),
       shape: RoundedRectangleBorder(
