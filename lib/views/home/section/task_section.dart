@@ -55,7 +55,7 @@ class TaskSection extends StatelessWidget {
                   Text(
                     '${activity.timeStart} - ${activity.timeStop}',
                     style: const TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 14.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                         fontFamily: 'Poppins'

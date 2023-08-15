@@ -5,6 +5,8 @@ import 'package:antara/app/controllers/habit_controller.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
 
 import '../../home/section/home_section.dart';
 import '../../activity/main/add_activity.dart';
@@ -32,17 +34,9 @@ class _HomeViewState extends State<HomeView> {
 
 
   void _onItemTapped(int index){
-    // final result = await Navigator.push(context, MaterialPageRoute(builder: (context)=> AddActivity()));
     setState((){
       selectedIndex = index;
     });
-
-    // if (result is ActivityModel){
-    //   setState(() {
-    //     _activityController.listActivity.add(result);
-    //     print('result added');
-    //   });
-    // }
   }
   @override
   Widget build(BuildContext context) {
@@ -65,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
           backgroundColor: const Color(0xFFE61A4F),
           items: const[
             TabItem(icon: Icons.home, title: 'beranda'),
-            TabItem(icon: Icons.add, title: 'Tambah Aktivitas'),
+            TabItem(icon: Icons.add , title: 'Tambah Aktivitas'),
             TabItem(icon: Icons.account_circle_rounded, title: 'Profil'),
           ],
           ),

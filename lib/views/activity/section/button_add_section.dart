@@ -29,12 +29,15 @@ class ButtonAddSection extends StatelessWidget {
         ),
         child: ElevatedButton(
           onPressed: (){
-            controllerActivity.listActivity.add(ActivityModel(
+            controllerActivity.listActivity.add(
+                ActivityModel(
                 timeStart: controllerActivity.startTime,
                 timeStop: controllerActivity.stopTime,
-                activity: controllerActivity.name)
+                activity: controllerActivity.name
+                )
             );
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeView()));
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const HomeView()));
           },
           style: ElevatedButton.styleFrom(
             // backgroundColor: MyColors.primaryColor,

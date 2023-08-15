@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:day_night_time_picker/day_night_time_picker.dart';
 
-import 'package:antara/models/activity_model.dart';
-
 import '../../../app/controllers/activity_controller.dart';
 
 class TimeStopSection extends StatelessWidget {
@@ -79,7 +77,7 @@ class TimeStopSection extends StatelessWidget {
                   ),
                 ),
                 backgroundColor: MaterialStateProperty.all<Color>(
-                  Color(0xFFE61A4F),
+                  const Color(0xFFE61A4F),
                 ),
               ),
               child: Container(
